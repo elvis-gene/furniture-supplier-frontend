@@ -7,3 +7,5 @@ export class Product {
   weight: number;
   imageUrl: string;
 }
+
+// todo: add link to products on the left sidebar of the stock component
