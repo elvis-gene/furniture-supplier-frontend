@@ -4,27 +4,33 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <a class="navbar-brand" href="#">Furniture Supplier</a>
+  <a class="navbar-brand" href="/">Furniture Supplier</a>
 
   <div class="collapse navbar-collapse" id="navbarToggler">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item">
-        <a class="nav-link" href="#">Home</a>
+        <a [routerLink]="['/home']" class="nav-link" href="/">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Staff</a>
+        <a class="nav-link" href="/staff">Staff</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Deliveries</a>
+        <a class="nav-link" href="/stock">Stock</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Promotions</a>
+        <a class="nav-link" href="/deliveries">Deliveries</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/sales">Sales</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/customers">Customers</a>
       </li>
 
     </ul>
 
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search Events" aria-label="Search">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search Anything" aria-label="Search">
       <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>

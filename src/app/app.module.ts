@@ -1,16 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {FormsModule} from '@angular/forms';
 
 import { HomeAppComponent } from './home-app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StaffComponent } from './staff/staff.component';
 import { SalesComponent } from './sales/sales.component';
 import { ClienteleComponent } from './clientele/clientele.component';
-import { StockcontrolComponent } from './stockcontrol/stockcontrol.component';
+import { StockControlComponent } from './stockcontrol/stock-control.component';
 import { DistributionComponent } from './distribution/distribution.component';
 import { StaffLoginComponent } from './login/staff-login/staff-login.component';
 import { CustomerLoginComponent } from './login/customer-login/customer-login.component';
-import { NavComponent } from './base-ui/nav/nav.component';
+import { NavComponent } from './nav/nav.component';
+import {RouterModule} from '@angular/router';
+import {appRoutes} from '../../routes';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,7 @@ import { NavComponent } from './base-ui/nav/nav.component';
     StaffComponent,
     SalesComponent,
     ClienteleComponent,
-    StockcontrolComponent,
+    StockControlComponent,
     DistributionComponent,
     StaffLoginComponent,
     CustomerLoginComponent,
@@ -26,6 +29,8 @@ import { NavComponent } from './base-ui/nav/nav.component';
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot(appRoutes),
+    FormsModule,
     BrowserAnimationsModule
   ],
   providers: [],
