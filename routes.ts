@@ -8,6 +8,7 @@ import {StaffLoginComponent} from './src/app/login/staff-login/staff-login.compo
 import {CreateProductComponent} from './src/app/stockcontrol/products/create-product/create-product.component';
 import {StoreComponent} from './src/app/store/store.component';
 import {StaffHomepageComponent} from './src/app/staff/staff-homepage/staff-homepage.component';
+import {ProductsComponent} from './src/app/stockcontrol/products/products.component';
 
 export let appRoutes: Routes = [
   {path: 'staff', component: StaffHomepageComponent},
@@ -21,6 +22,8 @@ export let appRoutes: Routes = [
   {path: 'staff-login', component: StaffLoginComponent},
   {path: 'staff/stock/products/new', component: CreateProductComponent},
   {path: 'staff/employees', component: StaffComponent},
+  {path: 'staff/stock/products', component: ProductsComponent},
+
   {path: '', redirectTo: '/store', pathMatch: 'full'}
 ];
 
