@@ -1,13 +1,12 @@
 import {Routes} from '@angular/router';
-import {AppComponent} from './src/app/app.component';
 import {StaffComponent} from './src/app/staff/staff.component';
 import {StockControlComponent} from './src/app/stockcontrol/stock-control.component';
 import {SalesComponent} from './src/app/sales/sales.component';
 import {DistributionComponent} from './src/app/distribution/distribution.component';
 import {ClienteleComponent} from './src/app/clientele/clientele.component';
 import {StaffLoginComponent} from './src/app/login/staff-login/staff-login.component';
-import {CreateProductComponent} from './src/app/stockcontrol/create-product/create-product.component';
-import {StoreComponent} from './src/app/sales/store/store.component';
+import {CreateProductComponent} from './src/app/stockcontrol/products/create-product/create-product.component';
+import {StoreComponent} from './src/app/store/store.component';
 import {StaffHomepageComponent} from './src/app/staff/staff-homepage/staff-homepage.component';
 
 export let appRoutes: Routes = [

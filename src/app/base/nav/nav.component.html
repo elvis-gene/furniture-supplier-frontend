@@ -1,0 +1,96 @@
+<nav class="navbar navbar-dark navbar-expand-lg bg-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+          aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <a class="navbar-brand" href="/src">Furniture Supplier</a>
+
+  <div class="collapse navbar-collapse" id="navbarToggler">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+      <li class="nav-item">
+<!--        [routerLink]="['/home']"-->
+        <a class="nav-link" href="/staff">Home</a>
+      </li>
+
+      <li class="dropdown">
+        <a class="nav-link dropdown-toggle" href="" data-toggle="dropdown" >
+          Staff
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li class="nav-item">
+            <a class="dropdown-item" href="staff/employees">Employees</a>
+          </li>
+          <li class="nav-item">
+            <a class="dropdown-item" href="staff/jobs">Jobs</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a class="nav-link dropdown-toggle" href="" data-toggle="dropdown" >
+          Stock
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li class="nav-item">
+            <a class="dropdown-item" href="staff/stock">Categories</a>
+          </li>
+          <li class="nav-item">
+            <a class="dropdown-item" href="staff/stock/products">Products</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="staff/deliveries">Deliveries</a>
+      </li>
+
+      <li class="dropdown">
+        <a class="nav-link dropdown-toggle" href="" data-toggle="dropdown" >
+          Sales & Marketing
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li class="nav-item">
+            <a class="dropdown-item" href="staff/sales">All Sales</a>
+          </li>
+          <li class="nav-item">
+            <a class="dropdown-item" href="staff/sales/promotions">Promotions</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a class="nav-link dropdown-toggle" href="" data-toggle="dropdown" >
+          Clientele
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li class="nav-item">
+            <a class="dropdown-item" href="staff/customers/employees">Customers</a>
+          </li>
+          <li class="nav-item">
+            <a class="dropdown-item" href="staff/customers/appointments">Appointments</a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/store">Store</a>
+      </li>
+
+    </ul>
+
+  </div>
+
+  <div class="navbar" id="userText">
+    <ul class="nav navbar-nav">
+      <li>
+        <a class="navbar-text">Welcome Gene</a>
+      </li>
+    </ul>
+  </div>
+
+</nav>

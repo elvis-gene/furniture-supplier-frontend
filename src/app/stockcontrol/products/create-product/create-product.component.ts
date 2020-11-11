@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {IProduct} from '../models/product.model';
+import {IProduct} from '../../models/product.model';
 
 
 @Component({
