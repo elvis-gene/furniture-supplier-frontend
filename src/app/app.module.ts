@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
-import { HomeAppComponent } from './home-app.component';
+import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StaffComponent } from './staff/staff.component';
 import { SalesComponent } from './sales/sales.component';
@@ -14,10 +14,15 @@ import { CustomerLoginComponent } from './login/customer-login/customer-login.co
 import { NavComponent } from './nav/nav.component';
 import {RouterModule} from '@angular/router';
 import {appRoutes} from '../../routes';
+import {MaterialModule} from './material/material.module';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { CreateProductComponent } from './stockcontrol/create-product/create-product.component';
+import { StoreComponent } from './sales/store/store.component';
+import { StaffHomepageComponent } from './staff/staff-homepage/staff-homepage.component';
 
 @NgModule({
   declarations: [
-    HomeAppComponent,
+    AppComponent,
     StaffComponent,
     SalesComponent,
     ClienteleComponent,
@@ -25,15 +30,21 @@ import {appRoutes} from '../../routes';
     DistributionComponent,
     StaffLoginComponent,
     CustomerLoginComponent,
-    NavComponent
+    NavComponent,
+    CreateProductComponent,
+    StoreComponent,
+    StaffHomepageComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule,
+    MatSidenavModule,
+    ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [HomeAppComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

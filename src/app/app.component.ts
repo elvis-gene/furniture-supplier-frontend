@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-home',
-  templateUrl: './home-app.component.html',
+  templateUrl: './app.component.html',
 })
-export class HomeAppComponent {
+export class AppComponent {
   title = 'furniture-supplier-ui';
 }

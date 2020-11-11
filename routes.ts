@@ -1,25 +1,28 @@
 import {Routes} from '@angular/router';
-import {HomeAppComponent} from './src/app/home-app.component';
+import {AppComponent} from './src/app/app.component';
 import {StaffComponent} from './src/app/staff/staff.component';
 import {StockControlComponent} from './src/app/stockcontrol/stock-control.component';
 import {SalesComponent} from './src/app/sales/sales.component';
 import {DistributionComponent} from './src/app/distribution/distribution.component';
 import {ClienteleComponent} from './src/app/clientele/clientele.component';
 import {StaffLoginComponent} from './src/app/login/staff-login/staff-login.component';
+import {CreateProductComponent} from './src/app/stockcontrol/create-product/create-product.component';
+import {StoreComponent} from './src/app/sales/store/store.component';
+import {StaffHomepageComponent} from './src/app/staff/staff-homepage/staff-homepage.component';
 
 export let appRoutes: Routes = [
-  {path: 'staff', component: StaffComponent},
-  // {path: 'staff', component: StaffComponent}, todo: staff details component
-  {path: 'stock', component: StockControlComponent},
+  {path: 'staff', component: StaffHomepageComponent},
+  {path: 'store', component: StoreComponent},
+  {path: 'staff/stock', component: StockControlComponent},
   // {path: 'stock/products', component: StockControlComponent}, todo:
-  {path: 'sales', component: SalesComponent},
-  {path: 'sales/promotions', component: SalesComponent},
-  {path: 'sales/cart', component: SalesComponent},
-  {path: 'deliveries', component: DistributionComponent},
-  {path: 'customers', component: ClienteleComponent},
+  {path: 'staff/sales', component: SalesComponent},
+  {path: 'staff/sales/promotions', component: SalesComponent},
+  {path: 'staff/deliveries', component: DistributionComponent},
+  {path: 'staff/customers', component: ClienteleComponent},
   {path: 'staff-login', component: StaffLoginComponent},
-
-  {path: '', redirectTo: '/home', pathMatch: 'full'}
+  {path: 'staff/stock/products/new', component: CreateProductComponent},
+  {path: 'staff/employees', component: StaffComponent},
+  {path: '', redirectTo: '/store', pathMatch: 'full'}
 ];
 
 // Suggestions: ctrl + space
