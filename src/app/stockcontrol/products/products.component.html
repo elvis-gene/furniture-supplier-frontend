@@ -2,9 +2,17 @@
 
   <mat-sidenav-content>
     <button class="btn btn-dark mt-4" (click)="opened=!opened">Show Options</button>
+    <hr/>
+
+    <div *ngFor="let product of products">
+      <app-product-thumbnail  [product]="product"></app-product-thumbnail>
+    </div>
+
   </mat-sidenav-content>
 
   <mat-sidenav mode="side" position="end" [(opened)]="opened">
-    Sidebar
+    <div class="col-md-12 text-center">
+      <button class="btn btn-dark mt-4">Create Product</button>
+    </div>
   </mat-sidenav>
 </mat-sidenav-container>

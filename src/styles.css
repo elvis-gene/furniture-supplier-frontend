@@ -19,7 +19,7 @@ body {
 
 
 .hoverwell:hover {
-  background-color: #485563;
+  background-color: darkgray;
   cursor: pointer;
 }
 
@@ -52,5 +52,5 @@ button {
   background-color: #f89406;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/*html, body { height: 100%; }*/
+/*body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }*/

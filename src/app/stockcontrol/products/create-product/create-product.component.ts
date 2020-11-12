@@ -46,7 +46,7 @@ export class CreateProductComponent implements OnInit {
       categoryId: Number(formValues.categoryId),
       description: formValues.description,
       price: formValues.price,
-      image: formValues.imageURL
+      image: formValues.image
     };
 
     console.log(product);

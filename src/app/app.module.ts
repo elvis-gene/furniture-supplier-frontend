@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -24,6 +25,7 @@ import { FooterComponent } from './base/footer/footer.component';
 import { ProductsComponent } from './stockcontrol/products/products.component';
 import { PromotionsComponent } from './sales/promotions/promotions.component';
 import { AppointmentsComponent } from './clientele/appointments/appointments.component';
+import { ProductThumbnailComponent } from './stockcontrol/products/product-thumbnail/product-thumbnail.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,8 @@ import { AppointmentsComponent } from './clientele/appointments/appointments.com
     FooterComponent,
     ProductsComponent,
     PromotionsComponent,
-    AppointmentsComponent
+    AppointmentsComponent,
+    ProductThumbnailComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +55,8 @@ import { AppointmentsComponent } from './clientele/appointments/appointments.com
     BrowserAnimationsModule,
     MaterialModule,
     MatSidenavModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
