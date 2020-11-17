@@ -1,27 +1,30 @@
-<mat-sidenav-container>
+<div>
 
-  <mat-sidenav-content>
-    <div class="pt-2 pl-4">
-      <button class="btn btn-dark mt-4" (click)="opened=!opened">Show Options</button>
-    </div>
-    <div class="text-center">
-      <H1 class="pt-2 pl-4">All Products</H1>
-    </div>
+  <mat-sidenav-container>
 
-    <hr/>
+    <mat-sidenav-content>
+      <h1 class="pt-2">All Products</h1>
 
-    <div class="row">
-      <div *ngFor="let product of products" class="col-md-5">
-        <app-product-thumbnail  [product]="product"></app-product-thumbnail>
+      <hr/>
+
+      <div class="pb-3">
+        <button class="btn btn-secondary" (click)="opened=!opened">Show Options</button>
       </div>
 
-    </div>
+      <div class="row">
+        <div *ngFor="let product of products" class="col-md-5">
+          <app-product-thumbnail  [product]="product"></app-product-thumbnail>
+        </div>
 
-  </mat-sidenav-content>
+      </div>
 
-  <mat-sidenav mode="side" position="end" [(opened)]="opened">
-    <div class="col-md-12 text-center">
-      <button routerLink="/staff/stock/products/new" class="btn btn-dark mt-4">Create Product</button>
-    </div>
-  </mat-sidenav>
-</mat-sidenav-container>
+    </mat-sidenav-content>
+
+    <mat-sidenav mode="side" position="end" [(opened)]="opened">
+      <div class="col-md-12 text-center">
+        <button routerLink="/staff/stock/products/new" class="btn btn-secondary mt-4">Create Product</button>
+      </div>
+    </mat-sidenav>
+  </mat-sidenav-container>
+
+</div>

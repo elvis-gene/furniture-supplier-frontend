@@ -1,5 +1,5 @@
-export interface IProduct {
-  id: number;
+export class Product {
+  productCode: number;
   name: string;
   categoryId: number;
   description: string;

@@ -34,9 +34,3 @@ export let appRoutes: Routes = [
   {path: '', redirectTo: '/store', pathMatch: 'full'}
 ];
 
-// Suggestions: ctrl + space
-// Add detail components
-
-// Have Promotions under Sales
-// Have Products under stock
-// Appointments to be under customers.

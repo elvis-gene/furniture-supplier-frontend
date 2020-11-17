@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ProductService} from '../services/product.service';
-import {IProduct} from '../models/product.model';
+import {Product} from '../models/product.model';
 import {Observable} from 'rxjs';
 import {Router} from '@angular/router';
 
@@ -12,8 +12,7 @@ import {Router} from '@angular/router';
 export class ProductsComponent implements OnInit {
   opened = false;
   // products: Observable<IProduct[]>;
-  products: IProduct[];
-  // products: any;
+  products: Product[];
 
   constructor(private productService: ProductService, private router: Router) {
   }

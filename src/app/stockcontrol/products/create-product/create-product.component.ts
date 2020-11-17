@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {IProduct} from '../../models/product.model';
+import {Product} from '../../models/product.model';
 import {ProductService} from '../../services/product.service';
 import {Router} from '@angular/router';
 
@@ -16,6 +16,7 @@ export class CreateProductComponent implements OnInit {
   description: FormControl;
   price: FormControl;
   image: FormControl;
+  product: Product;
 
 
   constructor(private productService: ProductService, private router: Router) { }
@@ -39,17 +40,15 @@ export class CreateProductComponent implements OnInit {
   }
 
   createProduct(formValues) {
+    this.product = new Product();
 
-    const product: IProduct = {
-      id: undefined,
-      name: formValues.name,
-      categoryId: Number(formValues.categoryId),
-      description: formValues.description,
-      price: formValues.price,
-      image: formValues.image
-    };
+    this.product.name = formValues.name;
+    this.product.categoryId = Number(formValues.categoryId);
+    this.product.description = formValues.description;
+    this.product.price = formValues.price;
+    this.product.image = formValues.image;
 
-    this.productService.createProduct(product)
+    this.productService.createProduct(this.product)
       .subscribe(data => console.log(data), error => console.log(error));
   }
 }

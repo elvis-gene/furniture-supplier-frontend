@@ -1,4 +1,5 @@
-<div class="well hoverwell thumbnail pt-1 mb-3 pl-4 rounded">
+<script src="product-thumbnail.component.ts"></script>
+<div [routerLink]="['/staff/stock/products', product.productCode]" class="well hoverwell thumbnail pt-1 mb-3 pl-4 rounded">
   <img [src]="product?.image" [alt]="product?.name">
 
   <div class="row">
