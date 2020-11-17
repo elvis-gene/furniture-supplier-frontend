@@ -26,6 +26,7 @@ import { ProductsComponent } from './stockcontrol/products/products.component';
 import { PromotionsComponent } from './sales/promotions/promotions.component';
 import { AppointmentsComponent } from './clientele/appointments/appointments.component';
 import { ProductThumbnailComponent } from './stockcontrol/products/product-thumbnail/product-thumbnail.component';
+import { ProductDetailsComponent } from './stockcontrol/products/product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { ProductThumbnailComponent } from './stockcontrol/products/product-thumb
     ProductsComponent,
     PromotionsComponent,
     AppointmentsComponent,
-    ProductThumbnailComponent
+    ProductThumbnailComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,

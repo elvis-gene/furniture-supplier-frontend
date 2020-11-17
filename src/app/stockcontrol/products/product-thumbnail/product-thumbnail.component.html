@@ -1,7 +1,19 @@
-<div class="well hoverwell thumbnail pt-1 pl-4 rounded">
-  <h2>{{product.name}}</h2>
-  <div>Price: {{product.price}}</div>
-<!--  <div>Category: {{product.categoryId}}</div>-->
-  <div>Description: {{product.description}}</div>
-  <div></div>
+<div class="well hoverwell thumbnail pt-1 mb-3 pl-4 rounded">
+  <img [src]="product?.image" [alt]="product?.name">
+
+  <div class="row">
+    <div class="col-md-11">
+      <h2>{{product?.name}} </h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div><strong>Price:</strong> {{product?.price}}</div>
+      <!--  Add a switch statement to change the product category-->
+      <div><strong>Category:</strong> {{product?.categoryId}}</div>
+      <div><strong>Description:</strong> {{product?.description}}</div>
+    </div>
+
+  </div>
 </div>

@@ -13,6 +13,7 @@ import {AppointmentsComponent} from './src/app/clientele/appointments/appointmen
 import {PromotionsComponent} from './src/app/sales/promotions/promotions.component';
 import {JobsComponent} from './src/app/staff/jobs/jobs.component';
 import {ProductThumbnailComponent} from './src/app/stockcontrol/products/product-thumbnail/product-thumbnail.component';
+import {ProductDetailsComponent} from './src/app/stockcontrol/products/product-details/product-details.component';
 
 export let appRoutes: Routes = [
   {path: 'staff', component: StaffHomepageComponent},
@@ -28,6 +29,7 @@ export let appRoutes: Routes = [
   {path: 'staff/customers/appointments', component: AppointmentsComponent},
   {path: 'staff/jobs', component: JobsComponent},
   {path: 'staff/stock/products', component: ProductsComponent},
+  {path: 'staff/stock/products/:id', component: ProductDetailsComponent},
 
   {path: '', redirectTo: '/store', pathMatch: 'full'}
 ];
