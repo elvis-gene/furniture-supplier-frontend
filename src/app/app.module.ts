@@ -27,6 +27,10 @@ import { PromotionsComponent } from './sales/promotions/promotions.component';
 import { AppointmentsComponent } from './clientele/appointments/appointments.component';
 import { ProductThumbnailComponent } from './stockcontrol/products/product-thumbnail/product-thumbnail.component';
 import { ProductDetailsComponent } from './stockcontrol/products/product-details/product-details.component';
+import { UpdateProductComponent } from './stockcontrol/products/update-product/update-product.component';
+import { StoreProductThumbnailComponent } from './store/store-product-thumbnail/store-product-thumbnail.component';
+import { ReturnProductComponent } from './return-product/return-product.component';
+import { StoreProductDetailsComponent } from './store/store-product-details/store-product-details.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +52,11 @@ import { ProductDetailsComponent } from './stockcontrol/products/product-details
     PromotionsComponent,
     AppointmentsComponent,
     ProductThumbnailComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    UpdateProductComponent,
+    StoreProductThumbnailComponent,
+    ReturnProductComponent,
+    StoreProductDetailsComponent
   ],
   imports: [
     BrowserModule,

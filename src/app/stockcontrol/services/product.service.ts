@@ -39,7 +39,7 @@ export class ProductService {
 
   deleteProduct(id: number){
     const headers = new HttpHeaders({Authorization: 'Basic ' + btoa(this.username + ':' + this.password)});
-    return this.http.delete<boolean>(this.baseURL + 'delete' + id, {headers, responseType: 'text' as 'json'});
+    return this.http.delete<boolean>(this.baseURL + '/delete/' + id, {headers, responseType: 'text' as 'json'});
   }
 
 

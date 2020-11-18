@@ -5,8 +5,7 @@ import {Product} from '../../models/product.model';
 
 @Component({
   selector: 'app-product-details',
-  templateUrl: './product-details.component.html',
-  styleUrls: ['./product-details.component.css']
+  templateUrl: './product-details.component.html'
 })
 export class ProductDetailsComponent implements OnInit {
   product: Product;
@@ -24,4 +23,9 @@ export class ProductDetailsComponent implements OnInit {
     });
   }
 
+  deleteProduct() {
+    this.productService.deleteProduct(Number(this.route.snapshot.params.id)).subscribe(data => {
+      console.log(data);
+    });
+  }
 }

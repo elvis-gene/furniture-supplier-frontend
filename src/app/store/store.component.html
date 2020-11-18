@@ -1,1 +1,28 @@
-<p>store works!</p>
+<div>
+
+  <mat-sidenav-container>
+
+    <mat-sidenav-content>
+      <hr/>
+
+      <div class="pb-3">
+        <button class="btn btn-secondary" (click)="opened=!opened">Show Options</button>
+      </div>
+
+      <div class="row">
+        <div *ngFor="let product of products" class="col-md-5">
+          <app-store-product-thumbnail  [product]="product"></app-store-product-thumbnail>
+        </div>
+
+      </div>
+
+    </mat-sidenav-content>
+
+    <mat-sidenav mode="side" position="end" [(opened)]="opened">
+      <div class="col-md-12 text-center">
+        <button routerLink="/store/return-item" class="btn btn-secondary mt-4">Return Item</button>
+      </div>
+    </mat-sidenav>
+  </mat-sidenav-container>
+
+</div>

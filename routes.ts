@@ -12,8 +12,10 @@ import {ProductsComponent} from './src/app/stockcontrol/products/products.compon
 import {AppointmentsComponent} from './src/app/clientele/appointments/appointments.component';
 import {PromotionsComponent} from './src/app/sales/promotions/promotions.component';
 import {JobsComponent} from './src/app/staff/jobs/jobs.component';
-import {ProductThumbnailComponent} from './src/app/stockcontrol/products/product-thumbnail/product-thumbnail.component';
 import {ProductDetailsComponent} from './src/app/stockcontrol/products/product-details/product-details.component';
+import {UpdateProductComponent} from './src/app/stockcontrol/products/update-product/update-product.component';
+import {StoreProductDetailsComponent} from './src/app/store/store-product-details/store-product-details.component';
+import {ReturnProductComponent} from './src/app/return-product/return-product.component';
 
 export let appRoutes: Routes = [
   {path: 'staff', component: StaffHomepageComponent},
@@ -30,7 +32,11 @@ export let appRoutes: Routes = [
   {path: 'staff/jobs', component: JobsComponent},
   {path: 'staff/stock/products', component: ProductsComponent},
   {path: 'staff/stock/products/:id', component: ProductDetailsComponent},
+  {path: 'staff/stock/products/:id/update', component: UpdateProductComponent},
+  {path: 'store/product/:id', component: StoreProductDetailsComponent},
+  {path: 'store/return-item', component: ReturnProductComponent},
 
   {path: '', redirectTo: '/store', pathMatch: 'full'}
 ];
 
+// Todo:

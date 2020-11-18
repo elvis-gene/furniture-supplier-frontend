@@ -4,15 +4,15 @@
   </div>
 
   <div class="col-md-6">
-    <form [formGroup]="newProductForm" (ngSubmit)="createProduct(newProductForm.value)" autocomplete="off">
+    <form [formGroup]="updateProductForm" #updatedProduct (ngSubmit)="getNewProduct(updatedProduct)" autocomplete="off">
       <div class="form-group">
         <label for="productName">Product Name:</label>
-        <em *ngIf="name.invalid && name.dirty">Required</em>
-        <input formControlName="name" id="productName" type="text" class="form-control" placeholder="product name..." />
+<!--        <em *ngIf="name.invalid && name.dirty">Required</em>-->
+        <input formControlName="name" [(ngModel)]="oldProduct.name" id="productName" type="text" class="form-control" placeholder="product name..." />
       </div>
       <div class="form-group">
         <label for="categoryId">Category:</label>
-        <select formControlName="categoryId" id="categoryId" class="form-control">
+        <select formControlName="categoryId" [(ngModel)]="oldProduct.categoryId" id="categoryId" class="form-control">
           <option value="">select category...</option>
           <option value="1">Bed</option>
           <option value="2">Couch</option>
@@ -22,22 +22,22 @@
       </div>
       <div class="form-group">
         <label for="productDescription">Description:</label>
-        <textarea formControlName="description" id="productDescription" rows=3 class="form-control" placeholder="description..."></textarea>
+        <textarea formControlName="description" [(ngModel)]="oldProduct.description" id="productDescription" rows=3 class="form-control" placeholder="description..."></textarea>
       </div>
       <div class="form-group">
         <label for="productPrice">Price:</label>
-        <input formControlName="price" id="productPrice" type="number" class="form-control" placeholder="Price..." />
+        <input formControlName="price" [(ngModel)]="oldProduct.price" id="productPrice" type="number" class="form-control" placeholder="Price..." />
       </div>
 
       <div class="form-group">
         <label for="productImage">Image:</label>
         <div class="input-group">
           <div class="input-group-prepend">
-            <span class="input-group-text" id="inputGroupFileAddon">Upload</span>
+            <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
           </div>
           <div class="custom-file">
-            <input formControlName="image" type="file" class="custom-file-input" id="productImage"
-                   aria-describedby="inputGroupFileAddon">
+            <input formControlName="image"  [(ngModel)]="oldProduct.image"  type="file" class="custom-file-input" id="productImage"
+                   aria-describedby="inputGroupFileAddon01">
             <label class="custom-file-label" for="productImage">Choose file</label>
           </div>
         </div>

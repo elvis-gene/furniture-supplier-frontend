@@ -51,4 +51,10 @@ export class CreateProductComponent implements OnInit {
     this.productService.createProduct(this.product)
       .subscribe(data => console.log(data), error => console.log(error));
   }
+
+  cancel() {
+    this.router.navigate(['staff/stock/products']).then(r => {
+      console.log(r);
+    });
+  }
 }

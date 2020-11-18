@@ -11,11 +11,17 @@
         <button class="btn btn-secondary" (click)="opened=!opened">Show Options</button>
       </div>
 
-      <div class="row">
-        <div *ngFor="let product of products" class="col-md-5">
+<!--      <div class="row">-->
+<!--        <div *ngFor="let product of products" class="col-md-5">-->
+<!--          <app-product-thumbnail  [product]="product"></app-product-thumbnail>-->
+<!--        </div>-->
+
+<!--      </div>-->
+
+      <div>
+        <div *ngFor="let product of products">
           <app-product-thumbnail  [product]="product"></app-product-thumbnail>
         </div>
-
       </div>
 
     </mat-sidenav-content>
