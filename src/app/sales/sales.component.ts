@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Sale} from './models/sale.model';
+import {SaleService} from './services/sale.service';
 
 @Component({
   selector: 'app-sales',
@@ -6,10 +8,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sales.component.css']
 })
 export class SalesComponent implements OnInit {
+  opened: boolean;
+  sales: Sale[];
 
-  constructor() { }
+  constructor(private saleService: SaleService) { }
 
   ngOnInit(): void {
+    this.getSales();
+  }
+
+  getSales(){
+    this.saleService.getSales().subscribe(sale => {
+      console.log(sale);
+      this.sales = Object.values(sale);
+      console.log(this.sales);
+    });
   }
 
 }

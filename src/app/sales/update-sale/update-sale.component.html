@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="col-md-12 pt-3">
+    <h2>Update Sale</h2>
+  </div>
+
+  <div class="col-md-6">
+    <form [formGroup]="updatedSaleForm" (ngSubmit)="getNewSale(updatedSaleForm)" autocomplete="off">
+      <div class="form-group">
+        <label for="amount">Total Amount:</label>
+        <!--        <em *ngIf="name.invalid && name.dirty">Required</em>-->
+        <input formControlName="amount" [(ngModel)]="oldSale.totalAmount" id="amount" type="text" class="form-control" placeholder="total amount..." />
+      </div>
+
+      <button type="submit" class="btn btn-primary mr-3">Save</button>
+      <button routerLink="/staff/stock/products" type="button" class="btn btn-secondary" (click)="cancel()">Cancel</button>
+    </form>
+  </div>
+
+</div>

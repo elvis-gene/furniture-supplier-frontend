@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container pb-4">
   <div class="col-md-12 pt-3">
     <h2>Create Product</h2>
   </div>
@@ -28,6 +28,10 @@
         <label for="productPrice">Price:</label>
         <input formControlName="price" id="productPrice" type="number" class="form-control" placeholder="Price..." />
       </div>
+      <div class="form-group">
+        <label for="productPrice">Quantity:</label>
+        <input formControlName="quantity" id="productQuantity" type="number" class="form-control" placeholder="Quantity..." />
+      </div>
 
       <div class="form-group">
         <label for="productImage">Image:</label>
@@ -36,7 +40,7 @@
             <span class="input-group-text" id="inputGroupFileAddon">Upload</span>
           </div>
           <div class="custom-file">
-            <input formControlName="image" type="file" class="custom-file-input" id="productImage"
+            <input formControlName="image" type="file" class="custom-file-input" id="productImage" placeholder="image name" [(ngModel)]="imageName"
                    aria-describedby="inputGroupFileAddon">
             <label class="custom-file-label" for="productImage">Choose file</label>
           </div>

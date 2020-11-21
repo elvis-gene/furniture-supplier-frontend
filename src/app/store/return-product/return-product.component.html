@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="col-md-12 pt-3">
+    <h2>Return Item(s)</h2>
+  </div>
+
+  <div class="col-md-6">
+    <form [formGroup]="returnItemsForm" (ngSubmit)="getSaleInfo(returnItemsForm)" autocomplete="off">
+      <div class="form-group">
+        <label for="saleCode">Sale Code:</label>
+        <input formControlName="saleCode" id="saleCode" type="text" class="form-control" placeholder="sale code..." />
+      </div>
+
+      <div class="form-group">
+        <label for="returnReason">Reason for return:</label>
+        <textarea formControlName="reason" id="returnReason" rows=3 class="form-control" placeholder="reason..."></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary mr-3" (click)="returnItems()">Submit</button>
+      <button routerLink="/staff/sales" type="button" class="btn btn-secondary">Cancel</button>
+    </form>
+  </div>
+
+</div>

@@ -1,1 +1,36 @@
-<p>sales works!</p>
+<div class="container">
+
+  <mat-sidenav-container>
+
+    <mat-sidenav-content>
+      <h1 class="pt-2">All Sales</h1>
+
+      <hr/>
+
+      <div class="pb-3">
+        <button class="btn btn-secondary" (click)="opened=!opened">Show Options</button>
+      </div>
+
+      <!--      <div class="row">-->
+      <!--        <div *ngFor="let product of products" class="col-md-5">-->
+      <!--          <app-product-thumbnail  [product]="product"></app-product-thumbnail>-->
+      <!--        </div>-->
+
+      <!--      </div>-->
+
+      <div>
+        <div *ngFor="let sale of sales">
+          <app-sale-thumbnail [sale]="sale"></app-sale-thumbnail>
+        </div>
+      </div>
+
+    </mat-sidenav-content>
+
+    <mat-sidenav mode="side" position="end" [(opened)]="opened">
+      <div class="col-md-12 text-center">
+        <button routerLink="/staff/sales/new" class="btn btn-secondary mt-4">Create Sale</button>
+      </div>
+    </mat-sidenav>
+  </mat-sidenav-container>
+
+</div>

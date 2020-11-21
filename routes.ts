@@ -15,7 +15,10 @@ import {JobsComponent} from './src/app/staff/jobs/jobs.component';
 import {ProductDetailsComponent} from './src/app/stockcontrol/products/product-details/product-details.component';
 import {UpdateProductComponent} from './src/app/stockcontrol/products/update-product/update-product.component';
 import {StoreProductDetailsComponent} from './src/app/store/store-product-details/store-product-details.component';
-import {ReturnProductComponent} from './src/app/return-product/return-product.component';
+import {ReturnProductComponent} from './src/app/store/return-product/return-product.component';
+import {ViewCartComponent} from './src/app/store/view-cart/view-cart.component';
+import {CreateSaleComponent} from './src/app/create-sale/create-sale.component';
+import {UpdateSaleComponent} from './src/app/sales/update-sale/update-sale.component';
 
 export let appRoutes: Routes = [
   {path: 'staff', component: StaffHomepageComponent},
@@ -35,6 +38,9 @@ export let appRoutes: Routes = [
   {path: 'staff/stock/products/:id/update', component: UpdateProductComponent},
   {path: 'store/product/:id', component: StoreProductDetailsComponent},
   {path: 'store/return-item', component: ReturnProductComponent},
+  {path: 'store/cart', component: ViewCartComponent},
+  {path: 'staff/sales/new', component: CreateSaleComponent},
+  {path: 'staff/sales/:id/update', component: UpdateSaleComponent},
 
   {path: '', redirectTo: '/store', pathMatch: 'full'}
 ];

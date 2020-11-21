@@ -10,8 +10,21 @@
 
     <div class="row">
       <div class="col-md-12">
-        <div><strong>Price:</strong> {{product?.price}}</div>
-        <div><strong>Category:</strong> {{product?.categoryId}}</div>
+        <div><strong>Price:</strong> R{{product?.price}}</div>
+        <div [ngSwitch]="product.categoryId">
+        <span *ngSwitchCase="1">
+          <strong>Category:</strong> Bed
+        </span>
+          <span *ngSwitchCase="2">
+          <strong>Category:</strong> Couch
+        </span>
+          <span *ngSwitchCase="3">
+          <strong>Category:</strong> Wardrobe
+        </span>
+          <span *ngSwitchCase="4">
+          <strong>Category:</strong> Cupboard
+        </span>
+        </div>
         <div><strong>Description:</strong> {{product?.description}}</div>
       </div>
 

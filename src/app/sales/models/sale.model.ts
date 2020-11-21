@@ -1,5 +1,5 @@
 export class Sale {
-  id: number;
-  total: number;
-  time: string;
+  saleCode: number;
+  totalAmount: number;
+  saleTime: Date;
 }

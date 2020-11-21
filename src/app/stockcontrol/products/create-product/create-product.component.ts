@@ -15,8 +15,10 @@ export class CreateProductComponent implements OnInit {
   categoryId: FormControl;
   description: FormControl;
   price: FormControl;
+  quantity: FormControl;
   image: FormControl;
   product: Product;
+  imageName: string;
 
 
   constructor(private productService: ProductService, private router: Router) { }
@@ -26,6 +28,7 @@ export class CreateProductComponent implements OnInit {
     this.categoryId = new FormControl('', Validators.required);
     this.description = new FormControl('', Validators.required);
     this.price = new FormControl('', Validators.required);
+    this.quantity = new FormControl('', Validators.required);
     this.image = new FormControl();
 
     Validators.maxLength(500);
@@ -35,6 +38,7 @@ export class CreateProductComponent implements OnInit {
       categoryId: this.categoryId,
       description: this.description,
       price: this.price,
+      quantity: this.quantity,
       image: this.image
     });
   }
@@ -46,6 +50,7 @@ export class CreateProductComponent implements OnInit {
     this.product.categoryId = Number(formValues.categoryId);
     this.product.description = formValues.description;
     this.product.price = formValues.price;
+    this.product.quantity = formValues.quantity;
     this.product.image = formValues.image;
 
     this.productService.createProduct(this.product)

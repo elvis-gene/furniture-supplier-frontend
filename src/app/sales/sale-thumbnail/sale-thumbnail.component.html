@@ -1,0 +1,19 @@
+<script src="product-thumbnail.component.ts"></script>
+<div [routerLink]="['/staff/sales/', sale.saleCode]" class="well hoverwell thumbnail pt-1 mb-3 pl-4 rounded">
+
+  <div class="row">
+    <div class="col-md-9">
+      <div><strong>Sale code:</strong> {{sale?.saleCode}}</div>
+      <div><strong>Time:</strong> {{sale?.saleTime}}</div>
+      <div><strong>Total Amount:</strong> {{sale?.totalAmount}}</div>
+    </div>
+
+    <div class="col-md-1 pt-3">
+      <button [routerLink]="['/staff/sales/' + sale.saleCode +'/update']" type="submit" class="btn btn-secondary mr-3">Edit</button>
+    </div>
+    <div class="col-md-2 pt-3">
+      <button type="button" class="btn btn-danger" (click)="deleteSale(sale.saleCode)">Delete</button>
+    </div>
+
+  </div>
+</div>

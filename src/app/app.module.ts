@@ -29,8 +29,14 @@ import { ProductThumbnailComponent } from './stockcontrol/products/product-thumb
 import { ProductDetailsComponent } from './stockcontrol/products/product-details/product-details.component';
 import { UpdateProductComponent } from './stockcontrol/products/update-product/update-product.component';
 import { StoreProductThumbnailComponent } from './store/store-product-thumbnail/store-product-thumbnail.component';
-import { ReturnProductComponent } from './return-product/return-product.component';
+import { ReturnProductComponent } from './store/return-product/return-product.component';
 import { StoreProductDetailsComponent } from './store/store-product-details/store-product-details.component';
+import { ViewCartComponent } from './store/view-cart/view-cart.component';
+import { CartProductThumbnailComponent } from './store/cart-product-thumbnail/cart-product-thumbnail.component';
+import { SaleThumbnailComponent } from './sales/sale-thumbnail/sale-thumbnail.component';
+import { CreateSaleComponent } from './create-sale/create-sale.component';
+import { UpdateSaleComponent } from './sales/update-sale/update-sale.component';
+import { SaleDetailsComponent } from './sales/sale-details/sale-details.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +62,13 @@ import { StoreProductDetailsComponent } from './store/store-product-details/stor
     UpdateProductComponent,
     StoreProductThumbnailComponent,
     ReturnProductComponent,
-    StoreProductDetailsComponent
+    StoreProductDetailsComponent,
+    ViewCartComponent,
+    CartProductThumbnailComponent,
+    SaleThumbnailComponent,
+    CreateSaleComponent,
+    UpdateSaleComponent,
+    SaleDetailsComponent
   ],
   imports: [
     BrowserModule,
