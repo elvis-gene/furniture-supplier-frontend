@@ -1,18 +1,19 @@
-<div class="container">
+<div class="container pb-4">
   <div class="col-md-12 pt-3">
-    <h2>Create Product</h2>
+    <h2>Update Product</h2>
   </div>
 
+  <!--  col-md-4 col-md-offset-4-->
   <div class="col-md-6">
-    <form [formGroup]="updateProductForm" #updatedProduct (ngSubmit)="getNewProduct(updatedProduct)" autocomplete="off">
+    <form #form="ngForm">
+
       <div class="form-group">
         <label for="productName">Product Name:</label>
-<!--        <em *ngIf="name.invalid && name.dirty">Required</em>-->
-        <input formControlName="name" [(ngModel)]="oldProduct.name" id="productName" type="text" class="form-control" placeholder="product name..." />
+        <input id="productName" name="productName" class="form-control" placeholder="product name..." [(ngModel)]="oldProduct.name"/>
       </div>
       <div class="form-group">
         <label for="categoryId">Category:</label>
-        <select formControlName="categoryId" [(ngModel)]="oldProduct.categoryId" id="categoryId" class="form-control">
+        <select id="categoryId"  name="categoryId" class="form-control" [(ngModel)]="oldProduct.categoryId">
           <option value="">select category...</option>
           <option value="1">Bed</option>
           <option value="2">Couch</option>
@@ -22,11 +23,11 @@
       </div>
       <div class="form-group">
         <label for="productDescription">Description:</label>
-        <textarea formControlName="description" [(ngModel)]="oldProduct.description" id="productDescription" rows=3 class="form-control" placeholder="description..."></textarea>
+        <textarea id="productDescription" name="description" rows=3 class="form-control" placeholder="description..." [(ngModel)]="oldProduct.description"></textarea>
       </div>
       <div class="form-group">
         <label for="productPrice">Price:</label>
-        <input formControlName="price" [(ngModel)]="oldProduct.price" id="productPrice" type="number" class="form-control" placeholder="Price..." />
+        <input id="productPrice" name="price" type="number" class="form-control" placeholder="Price..." [(ngModel)]="oldProduct.price"/>
       </div>
 
       <div class="form-group">
@@ -36,16 +37,18 @@
             <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
           </div>
           <div class="custom-file">
-            <input formControlName="image"  [(ngModel)]="oldProduct.image"  type="file" class="custom-file-input" id="productImage"
-                   aria-describedby="inputGroupFileAddon01">
+            <input name="image" type="file" class="custom-file-input" id="productImage"
+                   aria-describedby="inputGroupFileAddon01" [(ngModel)]="oldProduct.image">
             <label class="custom-file-label" for="productImage">Choose file</label>
           </div>
         </div>
       </div>
 
-      <button type="submit" class="btn btn-primary mr-3">Save</button>
+      <button type="submit" class="btn btn-primary mr-3" (click)="updateProduct(form)">Save</button>
       <button routerLink="/staff/stock/products" type="button" class="btn btn-secondary" (click)="cancel()">Cancel</button>
     </form>
   </div>
 
 </div>
+
+<!--{{ form.value | json }}-->
