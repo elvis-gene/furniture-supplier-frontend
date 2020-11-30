@@ -1,0 +1,36 @@
+<script src="sale-product-thumbnail.component.ts"></script>
+<div class="pt-3 mb-3 pl-4 rounded">
+<!--  [routerLink]="['/staff/stock/products', product.productCode]"-->
+  <!--  <img [src]="product?.image" [alt]="product?.name">-->
+
+  <div class="row">
+    <div class="col-md-11">
+      <h2>{{product?.name}} </h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div><strong>Price:</strong> R{{product?.price}}</div>
+      <div [ngSwitch]="product.categoryId">
+        <span *ngSwitchCase="1">
+          <strong>Category:</strong> Bed
+        </span>
+        <span *ngSwitchCase="2">
+          <strong>Category:</strong> Couch
+        </span>
+        <span *ngSwitchCase="3">
+          <strong>Category:</strong> Wardrobe
+        </span>
+        <span *ngSwitchCase="4">
+          <strong>Category:</strong> Cupboard
+        </span>
+      </div>
+      <div><strong>Description:</strong> {{product?.description}}</div>
+    </div>
+
+  </div>
+
+  <hr/>
+
+</div>

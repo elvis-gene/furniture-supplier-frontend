@@ -89,11 +89,29 @@
 <!--    <mat-icon [matBadge]="numProducts">shopping_cart</mat-icon>-->
 <!--  </div>-->
 
+<!--  <div class="navbar" id="userText">-->
+<!--    <ul class="nav navbar-nav">-->
+<!--      <li>-->
+<!--        <a class="navbar-text">Welcome Gene</a>-->
+<!--      </li>-->
+<!--    </ul>-->
+<!--  </div>-->
+
   <div class="navbar" id="userText">
     <ul class="nav navbar-nav">
-      <li>
-        <a class="navbar-text">Welcome Gene</a>
+
+      <li class="dropdown">
+        <a class="nav-link dropdown-toggle" href="" data-toggle="dropdown" >
+          Welcome Gene
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li class="nav-item">
+            <a class="dropdown-item" href="staff/customers">Logout</a>
+          </li>
+        </ul>
       </li>
+
     </ul>
   </div>
 

@@ -19,6 +19,7 @@ import {ReturnProductComponent} from './src/app/store/return-product/return-prod
 import {ViewCartComponent} from './src/app/store/view-cart/view-cart.component';
 import {CreateSaleComponent} from './src/app/create-sale/create-sale.component';
 import {UpdateSaleComponent} from './src/app/sales/update-sale/update-sale.component';
+import {SaleDetailsComponent} from './src/app/sales/sale-details/sale-details.component';
 
 export let appRoutes: Routes = [
   {path: 'staff', component: StaffHomepageComponent},
@@ -41,6 +42,7 @@ export let appRoutes: Routes = [
   {path: 'store/cart', component: ViewCartComponent},
   {path: 'staff/sales/new', component: CreateSaleComponent},
   {path: 'staff/sales/:id/update', component: UpdateSaleComponent},
+  {path: 'staff/sales/:id', component: SaleDetailsComponent},
 
   {path: '', redirectTo: '/store', pathMatch: 'full'}
 ];

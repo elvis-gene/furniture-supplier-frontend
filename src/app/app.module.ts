@@ -39,6 +39,8 @@ import { UpdateSaleComponent } from './sales/update-sale/update-sale.component';
 import { SaleDetailsComponent } from './sales/sale-details/sale-details.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatBadgeModule} from '@angular/material/badge';
+import { NavClientComponent } from './base/nav-client/nav-client.component';
+import { SaleProductThumbnailComponent } from './sales/sale-product-thumbnail/sale-product-thumbnail.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +72,9 @@ import {MatBadgeModule} from '@angular/material/badge';
     SaleThumbnailComponent,
     CreateSaleComponent,
     UpdateSaleComponent,
-    SaleDetailsComponent
+    SaleDetailsComponent,
+    NavClientComponent,
+    SaleProductThumbnailComponent
   ],
     imports: [
         BrowserModule,

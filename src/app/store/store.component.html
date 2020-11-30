@@ -1,3 +1,5 @@
+<app-nav-client></app-nav-client>
+
 <div>
 
   <mat-sidenav-container>
@@ -11,7 +13,11 @@
         </div>
 
         <div class="col-md-3">
-          <mat-icon [matBadge]="numProducts">shopping_cart</mat-icon>
+          <mat-icon [matBadge]="numProducts">
+            <a routerLink="/store/cart" >
+              shopping_cart
+            </a>
+          </mat-icon>
         </div>
       </div>
 

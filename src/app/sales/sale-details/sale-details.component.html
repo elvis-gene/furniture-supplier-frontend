@@ -1,1 +1,31 @@
-<p>sale-details works!</p>
+<app-nav></app-nav>
+
+<script src="sale-details.component.ts"></script>
+<div class="pt-4 mb-3 pl-4">
+
+  <div class="row">
+    <div class="col-md-10">
+      <div><strong>Sale code:</strong> {{sale?.saleCode}}</div>
+      <div><strong>Time:</strong> {{sale?.saleTime}}</div>
+      <div><strong>Total Amount:</strong> {{sale?.totalAmount}}</div>
+    </div>
+
+    <!--    <div class="col-md-1 pt-3">-->
+    <!--      <button [routerLink]="['/staff/sales/' + sale.saleCode +'/update']" type="submit" class="btn btn-secondary mr-3">Edit</button>-->
+    <!--    </div>-->
+<!--    <div class="col-md-2 pt-3">-->
+<!--      <button type="button" class="btn btn-danger" (click)="deleteSale(sale.saleCode)">Delete</button>-->
+<!--    </div>-->
+  </div>
+</div>
+
+<div class="pt-2 ml-3">
+  <h2 class="text-center">Sale Products</h2>
+  <hr/>
+</div>
+
+<div>
+  <div *ngFor="let product of sale.products">
+    <app-sale-product-thumbnail  [product]="product"></app-sale-product-thumbnail>
+  </div>
+</div>
