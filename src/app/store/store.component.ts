@@ -11,6 +11,7 @@ import {Router} from '@angular/router';
 export class StoreComponent implements OnInit {
   opened: boolean;
   products: Product[];
+  numProducts: string;
 
   constructor(private productService: ProductService) {
   }
@@ -25,5 +26,10 @@ export class StoreComponent implements OnInit {
       this.products = Object.values(product);
       console.log(this.products);
     });
+  }
+
+  receiveProductCount($event: any) {
+    this.numProducts = $event.toString();
+    console.log($event);
   }
 }

@@ -37,6 +37,8 @@ import { SaleThumbnailComponent } from './sales/sale-thumbnail/sale-thumbnail.co
 import { CreateSaleComponent } from './create-sale/create-sale.component';
 import { UpdateSaleComponent } from './sales/update-sale/update-sale.component';
 import { SaleDetailsComponent } from './sales/sale-details/sale-details.component';
+import {MatIconModule} from '@angular/material/icon';
+import {MatBadgeModule} from '@angular/material/badge';
 
 @NgModule({
   declarations: [
@@ -70,16 +72,18 @@ import { SaleDetailsComponent } from './sales/sale-details/sale-details.componen
     UpdateSaleComponent,
     SaleDetailsComponent
   ],
-  imports: [
-    BrowserModule,
-    RouterModule.forRoot(appRoutes),
-    FormsModule,
-    BrowserAnimationsModule,
-    MaterialModule,
-    MatSidenavModule,
-    ReactiveFormsModule,
-    HttpClientModule
-  ],
+    imports: [
+        BrowserModule,
+        RouterModule.forRoot(appRoutes),
+        FormsModule,
+        BrowserAnimationsModule,
+        MaterialModule,
+        MatSidenavModule,
+        ReactiveFormsModule,
+        HttpClientModule,
+        MatIconModule,
+        MatBadgeModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

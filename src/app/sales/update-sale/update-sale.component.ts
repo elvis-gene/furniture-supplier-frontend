@@ -27,6 +27,10 @@ export class UpdateSaleComponent implements OnInit {
   getSaleToUpdate() {
     this.saleService.getSale(Number(this.route.snapshot.params.id)).subscribe(sale => {
       this.oldSale = sale;
+      console.log(sale.products);
+
+      // Instead of updating the sale, delete it and create a new one. No manual creation of a sale.
+      //   You come to the shop, use computer to buy online
     });
   }
 

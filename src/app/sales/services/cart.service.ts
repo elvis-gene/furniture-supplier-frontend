@@ -14,7 +14,6 @@ export class CartService {
   totalAmount: number;
   // saleTime: string;
   sale: Sale;
-  private saleDateString: string;
 
 
   constructor(private saleService: SaleService) {
@@ -54,6 +53,7 @@ export class CartService {
   purchase(){
     this.sale.saleTime = new Date();
     this.sale.totalAmount = this.getTotalAmount();
+    this.sale.products = this.products;
 
     this.saleService.createSale(this.sale).subscribe(data => {
       console.log(data);

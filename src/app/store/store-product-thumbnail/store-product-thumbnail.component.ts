@@ -1,6 +1,7 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Product} from '../../stockcontrol/models/product.model';
 import {CartService} from '../../sales/services/cart.service';
+import {NavComponent} from '../../base/nav/nav.component';
 
 declare let toastr;
 @Component({
@@ -9,15 +10,24 @@ declare let toastr;
   styleUrls: ['./store-product-thumbnail.component.css']
 })
 export class StoreProductThumbnailComponent implements OnInit {
+  private static numProducts: number;
   @Input() product: Product;
+  @Output() eventEmitter = new EventEmitter();
 
-  constructor(private cartService: CartService) { }
+  constructor(private cartService: CartService) {
+    StoreProductThumbnailComponent.numProducts = 0;
+  }
 
   ngOnInit(): void {
   }
 
   addToCart() {
     this.cartService.addProductToCart(this.product);
-    toastr.success('Product added to the cart');
+    toastr.success(this.product.name + ' added to the cart');
+
+    StoreProductThumbnailComponent.numProducts += 1;
+    this.eventEmitter.emit(StoreProductThumbnailComponent.numProducts);
+
+    // NavComponent.updateCartIcon();
   }
 }

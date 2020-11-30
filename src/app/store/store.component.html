@@ -5,13 +5,19 @@
     <mat-sidenav-content>
       <hr/>
 
-      <div class="pb-3">
-        <button class="btn btn-secondary" (click)="opened=!opened">Show Options</button>
+      <div class="row">
+        <div class="pb-3 col-md-9">
+          <button class="btn btn-secondary" (click)="opened=!opened">Show Options</button>
+        </div>
+
+        <div class="col-md-3">
+          <mat-icon [matBadge]="numProducts">shopping_cart</mat-icon>
+        </div>
       </div>
 
       <div class="row">
         <div *ngFor="let product of products" class="col-md-5">
-          <app-store-product-thumbnail  [product]="product"></app-store-product-thumbnail>
+          <app-store-product-thumbnail (eventEmitter)="receiveProductCount($event)"  [product]="product"></app-store-product-thumbnail>
         </div>
 
       </div>
