@@ -10,7 +10,7 @@ import {Product} from '../../models/product.model';
 export class ProductDetailsComponent implements OnInit {
   product: Product;
 
-  constructor(private productService: ProductService, private route: ActivatedRoute) { }
+  constructor(private productService: ProductService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.getProduct();
@@ -26,6 +26,10 @@ export class ProductDetailsComponent implements OnInit {
   deleteProduct() {
     this.productService.deleteProduct(Number(this.route.snapshot.params.id)).subscribe(data => {
       console.log(data);
+    });
+
+    this.router.navigate(['staff/stock/products']).then(r => {
+      console.log((r));
     });
   }
 }

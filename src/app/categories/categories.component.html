@@ -1,0 +1,31 @@
+<app-nav></app-nav>
+
+<div class="container">
+
+  <mat-sidenav-container>
+
+    <mat-sidenav-content>
+      <h1 class="pt-2">All Product Categories</h1>
+
+      <hr/>
+
+      <div class="pb-3">
+        <button class="btn btn-secondary" (click)="opened=!opened">Show Options</button>
+      </div>
+
+      <div>
+        <div *ngFor="let category of categories">
+          <app-category-thumbnail  [category]="category"></app-category-thumbnail>
+        </div>
+      </div>
+
+    </mat-sidenav-content>
+
+    <mat-sidenav mode="side" position="end" [(opened)]="opened">
+      <div class="col-md-12 text-center">
+        <button routerLink="/staff/stock/categories/new" class="btn btn-secondary mt-4">Create Category</button>
+      </div>
+    </mat-sidenav>
+  </mat-sidenav-container>
+
+</div>

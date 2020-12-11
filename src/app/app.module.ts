@@ -41,6 +41,13 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatBadgeModule} from '@angular/material/badge';
 import { NavClientComponent } from './base/nav-client/nav-client.component';
 import { SaleProductThumbnailComponent } from './sales/sale-product-thumbnail/sale-product-thumbnail.component';
+import {AuthService} from './login/services/auth.service';
+import { ReturnsComponent } from './sales/returns/returns.component';
+import { CreateCategoryComponent } from './categories/create-category/create-category.component';
+import { CategoryDetailsComponent } from './categories/category-details/category-details.component';
+import { CategoryThumbnailComponent } from './categories/category-thumbnail/category-thumbnail.component';
+import { UpdateCategoryComponent } from './categories/update-category/update-category.component';
+import { CategoriesComponent } from './categories/categories.component';
 
 @NgModule({
   declarations: [
@@ -74,7 +81,13 @@ import { SaleProductThumbnailComponent } from './sales/sale-product-thumbnail/sa
     UpdateSaleComponent,
     SaleDetailsComponent,
     NavClientComponent,
-    SaleProductThumbnailComponent
+    SaleProductThumbnailComponent,
+    ReturnsComponent,
+    CreateCategoryComponent,
+    CategoryDetailsComponent,
+    CategoryThumbnailComponent,
+    UpdateCategoryComponent,
+    CategoriesComponent
   ],
     imports: [
         BrowserModule,
@@ -88,7 +101,9 @@ import { SaleProductThumbnailComponent } from './sales/sale-product-thumbnail/sa
         MatIconModule,
         MatBadgeModule
     ],
-  providers: [],
+  providers: [
+    AuthService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,16 @@
+<script src="product-thumbnail.component.ts"></script>
+<div [routerLink]="['/staff/stock/categories', category.categoryCode]" class="well hoverwell thumbnail pt-1 mb-3 pl-4 rounded">
+
+  <div class="row">
+    <div class="col-md-11">
+      <h2>{{category?.categoryName}} </h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div><strong>Description:</strong> {{category?.description}}</div>
+    </div>
+
+  </div>
+</div>

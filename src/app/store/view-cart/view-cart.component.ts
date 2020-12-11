@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Product} from '../../stockcontrol/models/product.model';
 import {CartService} from '../../sales/services/cart.service';
 import {SaleService} from '../../sales/services/sale.service';
+import {NgForm} from '@angular/forms';
 
 declare let toastr;
 @Component({
@@ -28,8 +29,14 @@ export class ViewCartComponent implements OnInit {
     this.totalAmount = this.cartService.getTotalAmount();
   }
 
-  purchase() {
+    purchase(form: NgForm) {
     this.cartService.purchase();
     toastr.success('Sale made!');
+
+    console.log(form.value);
+
+    if (form.value.delpick.toString().equals('Delivery')){
+      // call create delivery service
+    }
   }
 }

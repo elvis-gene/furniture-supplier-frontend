@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./staff-login.component.css']
 })
 export class StaffLoginComponent implements OnInit {
-  email: string;
   password: string;
+  username: string;
 
   constructor() { }
 

@@ -37,18 +37,19 @@
 <!--    </ul>-->
 <!--  </div>-->
 
-
     <div class="navbar" id="userText">
       <ul class="nav navbar-nav">
 
         <li class="dropdown">
-          <a class="nav-link dropdown-toggle" href="" data-toggle="dropdown" >
-            Welcome Client
+          <a class="nav-link" *ngIf="!authService.isAuthenticated()" [routerLink]="['login']">Login</a>
+
+          <a *ngIf="authService.isAuthenticated()" class="nav-link dropdown-toggle" href="" data-toggle="dropdown" >
+            Welcome {{authService.currentUser.username}}
             <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
             <li class="nav-item">
-              <a class="dropdown-item" href="staff/customers">Logout</a>
+              <a class="dropdown-item" [routerLink]="['login']">Logout</a>
             </li>
           </ul>
         </li>
